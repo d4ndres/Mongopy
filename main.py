@@ -3,7 +3,7 @@ from typing import Optional
 from enum import Enum
 
 #Pydantic
-from pydantic import BaseModel
+from pydantic import BaseModel, EmailStr
 from pydantic import Field
 
 #FastAPI
@@ -28,6 +28,7 @@ class Person(BaseModel):
 	nombre: str = Field(..., min_length = 1, max_length=50)
 	apellido: str = Field(..., min_length = 1, max_length=50)
 	edad: int = Field(..., gt=0, lt=120)
+	email: EmailStr = Field(..., title="Email")
 	color_pelo: Optional[HairColor] = Field(default=None)
 	es_casado: Optional[bool] = Field(default=None)
 

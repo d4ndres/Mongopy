@@ -25,12 +25,25 @@ class HairColor(Enum):
 
 
 class Person(BaseModel):
-	nombre: str = Field(..., min_length = 1, max_length=50)
-	apellido: str = Field(..., min_length = 1, max_length=50)
-	edad: int = Field(..., gt=0, lt=120)
+	nombre: str = Field(..., min_length = 1, max_length=50, example="GG" )
+	apellido: str = Field(..., min_length = 1, max_length=50, example="RR")
+	edad: int = Field(..., gt=0, lt=120, example=22)
 	email: EmailStr = Field(..., title="Email")
 	color_pelo: Optional[HairColor] = Field(default=None)
 	es_casado: Optional[bool] = Field(default=None)
+
+
+	# class Config:
+	# 	schema_extra = {
+	# 		"example": {
+	# 			"nombre": "D",
+	# 			"apellido": "R",
+	# 			"edad": 23,
+	# 			"email": "GG@g.com",
+	# 			"color_pelo": "black",
+	# 			"es_casado": False
+	# 		}
+	# 	}
 
 
 class Location(BaseModel):

@@ -46,6 +46,8 @@ class Person(BaseModel):
 	# 	}
 
 
+	#Se agrego ejemplos para Body, pero de la misma manera con example podemos agregar a path y queries
+
 class Location(BaseModel):
 	city: str
 	state: str

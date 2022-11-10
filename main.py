@@ -2,17 +2,25 @@
 from typing import Optional
 from enum import Enum
 
+#routes
+from routes.user import user
+
+
 #Pydantic
 from pydantic import BaseModel, EmailStr
 from pydantic import Field
 
 #FastAPI
 from fastapi import FastAPI
-from fastapi import Body, Path
-from fastapi import Query
+from fastapi import Body, Path, Query
+
+
+
+from routes.user import user
 
 app = FastAPI()
 
+app.include_router(user)
 
 #Models
 

@@ -1,0 +1,4 @@
+Que recibimos y que vamos a responder
+tipos de datos o forma en que vamos a describir los datos con los que estamos interactuando
+definir que va recibir una petecion put, get, post,
+esquema interno de la aplicacion

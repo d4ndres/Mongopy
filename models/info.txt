@@ -1,0 +1,2 @@
+modelar datos poder espesificar que datos se estaran guardando en la base de datos
+modelos que estaremos guardando en el db

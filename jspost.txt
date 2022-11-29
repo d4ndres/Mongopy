@@ -1,0 +1,15 @@
+var url = 'http://localhost:8000/users';
+var data = {
+    email: "LL@email.com",
+    name: "LL",
+    password: "2310"};
+
+fetch(url, {
+  method: 'POST', // or 'PUT'
+  body: JSON.stringify(data), // data can be `string` or {object}!
+  headers:{
+    'Content-Type': 'application/json'
+  }
+}).then(res => res.json())
+.catch(error => console.error('Error:', error))
+.then(response => console.log('Success:', response));
